@@ -1,0 +1,85 @@
+/* HOME PAGE STYLES */
+
+/* Structure */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+/* Text */
+
+p {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #979FA9;
+}
+
+/* Container for full page */
+
+.container-home {
+    width: 440px;
+    margin: auto;
+}
+
+/* Home logo */
+
+.logo-home {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 40px;
+}
+
+/* Home search */
+
+.search-home {
+    margin: 40px 0 80px;
+}
+
+.search-home-input {
+    display: flex;
+    width: 420px;
+    height: 60px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin: 4px auto 0;
+    background-color: #F2F4F6;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    box-sizing: border-box;
+    /* text */
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: #595E66;
+}
+
+.search-home-input::placeholder {
+    color: #979FA9;
+}
+
+.search-home-input:focus,
+.search-home-input:focus {
+    border: 2px solid #E4E6EB;
+    padding-left: 22px;
+}
+
+.search-error {
+    color: #F09676;
+    visibility: hidden;
+}

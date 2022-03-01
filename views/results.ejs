@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proteomatch</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&family=Ubuntu:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet"> 
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/results.css">
+</head>
+<body>
+    <div class="nav">
+        <a href="/">
+            <div class="return-home">
+                <img src="/images/logomark.svg" class="logo-results" alt="proteomatch logo which returns you to home screen">
+            </div>
+        </a>
+        <a href="https://beta.uniprot.org/" target="_blank">
+            <div class="nav-link">
+                <img src="/images/database-uniprot.svg" class="nav-icon" alt="database icon which links to uniprot">
+            </div>
+        </a>
+        <a href="https://github.com/DangelaLansbury" target="_blank">
+            <div class="nav-link">
+                <img src="/images/github.svg" class="nav-icon" alt="github icon which links to my github page">
+            </div>
+        </a>
+    </div>
+    <div class="container-results">
+        <div class="top-bar">
+            <div class="search-results">
+                <div class="search-results-icon">
+                    <img src="/images/search-results.svg" class="search-results-icon-img" alt="search icon">
+                </div>
+                <form action="/" method="post">
+                    <input id="search" class="search-results-input" autocomplete="off" type="text" name="proteoSearch" value="<%= keyword %>">
+                </form>
+            </div>
+        </div>
+        <div class="container-results-proteins">
+            <% allProteins.forEach(function(protein) { %>
+                <div class="result-block">
+                    <div class="row protein-row">
+                        <div class="protein-counter">
+                            <span><%= allProteins.indexOf(protein) + 1 %></span>
+                        </div>
+                        <a href="https://beta.uniprot.org/uniprotkb/<%= protein.id %>/entry" class="result result-protein" target="_blank">
+                            <span class="result-label">protein</span>
+                            <span class="result-value"><%= protein.name %></span>
+                        </a>
+                    </div>
+                    <div class="row organism-row">
+                        <a href="https://beta.uniprot.org/taxonomy/<%= protein.taxonID %>" class="result result-organism" target="_blank">
+                            <span class="result-label">organism</span>
+                            <span class="result-value"><%= protein.organism %></span>
+                        </a>
+                    </div>
+                </div>
+            <% }); %>
+            <div class="row bottom-row"></div>
+        </div>
+    </div>
+</body>
+</html>

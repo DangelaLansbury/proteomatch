@@ -1,0 +1,223 @@
+/* RESULTS PAGE STYLES */
+
+/* Structure */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+    background-color: white;
+    display: flex;
+    margin: 0;
+}
+
+/* Container for results page content */
+
+.container-results {
+    height: 100%;
+    width: 760px;
+    margin: auto;
+}
+
+/* Container for top search bar */
+
+.top-bar {
+    position: fixed;
+    height: 84px;
+    width: 760px;
+    z-index: 5;
+    top: 0;
+    background-color: white;
+}
+
+/* Results search */
+
+.search-results {
+    display: flex;
+    margin: 48px 40px 4px;
+}
+
+.search-results-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    width: 32px;
+    margin: 0;
+    background-color: #E3F1FD;
+}
+
+.search-results-icon-img {
+    display: flex;
+    height: 16px;
+    width: 16px;
+}
+
+.search-results-input {
+    display: inline-block;
+    height: 32px;
+    width: 343px;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    box-sizing: border-box;
+    background-color: #E3F1FD;
+    /* Text */
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #375F88;
+}
+
+/* Container for protein list */
+
+.container-results-proteins {
+    width: 760px;
+    margin: 80px 0 64px;
+    overflow: scroll;
+}
+
+/* Protein list */
+
+a {
+    text-decoration: none;
+}
+
+.row {
+    display: flex;
+    max-height: 32px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: 40px;
+    background-color: #F7F8FA;
+    color: #979FA9;
+}
+
+.result-block:hover > .protein-row {
+    background-color: #E4E6EB;
+    color: #4B9E8B;
+}
+
+.result-block:hover > .organism-row {
+    background-color: #E4E6EB;
+}
+
+.bottom-row {
+    height: 32px;
+    width: 375px;
+    margin-left: 40px;
+    margin-right: 345px;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    border-left: 8px solid white;
+    border-right: 8px solid white;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+.result-label {
+    padding-top: 2.5px;
+    font-family: 'Ubuntu Mono', monospace;
+    font-style: 400;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    opacity: 90%;
+}
+
+.result-value {
+    margin-left: 6px;
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+/* protein */
+
+.protein-row {
+    margin-left: 0;
+}
+
+.protein-counter {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 32px;
+    width: 28px;
+    padding-right: 12px;
+    background-color: white;
+    /* Text */
+    font-family: 'Ubuntu Mono', monospace;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: right;
+}
+
+.result-protein {
+    margin-left: 38px;
+    background-color: #e8f3f0;
+    color: #387668;
+}
+
+.result-protein:hover {
+    background-color: #4B9E8B;
+    color: white;
+}
+
+/* organism */
+
+.organism-row {
+    margin-left: 40px;
+}
+
+.result-organism {
+    margin-left: 88px;
+    background-color: #F0F2FC;
+    color: #5162B0;
+}
+
+.result-organism:hover {
+    background-color: #687AC5;
+    color: white;
+}
+
+/* Nav */
+
+.nav {
+    position: fixed;
+    z-index: 10;
+    top: 32px;
+    left: 32px;
+    width: 36px;
+    height: 44px;
+    padding: 16px;
+    background-color: white;
+}
+
+.nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    background-color: white;
+}
+
+.nav-icon {
+    display: flex;
+    height: 24px;
+    width: 24px;
+}
