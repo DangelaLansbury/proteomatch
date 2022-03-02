@@ -48,7 +48,7 @@ app.post("/", function(req, res){
                 proteins.push(protein)
             };
             if (proteins.length === 0){
-                res.render("home", {introduction: "Whoops, that phrase doesn't seem to match any keywords. Try searching for something like 'mRNA splicing' or 'endorphin'"});
+                res.render("home", {introduction: "Whoops, that phrase doesn't seem to match any keywords. Try searching for something like 'mRNA transport' or 'endorphin'"});
             } else {
                 res.redirect("/results");
             };
