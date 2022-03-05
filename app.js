@@ -13,7 +13,7 @@ let proteins = [];
 let query;
 
 app.get("/", function(req, res){
-    res.render("home", {introduction: "Find proteins by biological process or molecular function"});
+    res.render("home", {introduction: "Find proteins by biological process or molecular function. Try searching for something like mRNA transport."});
 });
 
 app.get("/results", function(req, res){
